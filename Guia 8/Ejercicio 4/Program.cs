@@ -106,17 +106,32 @@ namespace Ejercicio_4
                 opcion = MostrarPantallaSolicitarOpcionMenu();
                 switch (opcion)
                 {
-                    case 1: MostrarPantallaSolicitarNombreJugadores(); break;
-                    case 2: MostrarPantallaSolicitarResultados(); break;
-                    case 3: MostrarPantallaGanador(); break;
+                    case 1:
+                        {
+                            MostrarPantallaSolicitarNombreJugadores(); break;
+                        }
+                    case 2:
+                        {
+                            MostrarPantallaSolicitarResultados(); break;
+                        }
+                    case 3:
+                        {
+                            MostrarPantallaGanador(); break;
+                        }
+                    case 4:
+                        {
+                            Console.WriteLine("Saliendo..."); Thread.Sleep(500); break;
+                        }
                     default:
-                        Console.WriteLine("Opcion invalida.");
-                        Console.WriteLine("Redirigiendo al menu de opciones...");
-                        Thread.Sleep(2500);
-                        break;
+                        {
+                            Console.WriteLine("Opcion invalida");
+                            Console.WriteLine("Redirigiendo al menu de opciones...");
+                            Thread.Sleep(2500);
+                            break;
+                        }
                 }
             }
-            while (opcion != 3);
+            while (opcion != 4);
         }
     }
 }

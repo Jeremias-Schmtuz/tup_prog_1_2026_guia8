@@ -51,7 +51,7 @@ namespace Ejercicio_3
         }
         #endregion
 
-        #region MOSTRAR PANTALLA Y MOSTRAR LISTA ORDENADA
+        #region MOSTRAR LISTA ORDENADA
         static void MostrarPantallaMostrarListaOrdenada()
         {
             if (numeroLibreta1 > numeroLibreta2 && numeroLibreta1 > numeroLibreta3)
@@ -110,15 +110,28 @@ namespace Ejercicio_3
                 opcion = MostrarPantallaSolicitarOpcion();
                 switch (opcion)
                 {
-                    case 1: Program.RegistrarNombresYNumerosDeLibretas(); break;
-                    case 2: Program.MostrarPantallaMostrarListaOrdenada(); break;
+                    case 1:
+                        {
+                            RegistrarNombresYNumerosDeLibretas(); break;
+                        }
+                    case 2:
+                        {
+                            MostrarPantallaMostrarListaOrdenada(); break;
+                        }
+                    case 3:
+                        {
+                            Console.WriteLine("Saliendo..."); Thread.Sleep(500); break;
+                        }
                     default:
-                        Console.WriteLine("Opcion invalida");
-                        Console.WriteLine("Redirigiendo al menu de opciones...");
-                        Thread.Sleep(2500); break;
+                        {
+                            Console.WriteLine("Opcion invalida");
+                            Console.WriteLine("Redirigiendo al menu de opciones...");
+                            Thread.Sleep(2500);
+                            break;
+                        }
                 }
             }
-            while (opcion >= 1 && opcion <= 2);
+            while (opcion != 3);
         }
     }
 }

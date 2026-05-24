@@ -34,7 +34,7 @@ namespace Ejercicio_1
         }
         #endregion
 
-        #region MOSTRAR SOLICITAR NUMERO
+        #region SOLICITAR NUMERO
         static void MostrarPantallaSolicitarNumero()
         {
             Console.WriteLine("Ingrese un numero");
@@ -61,7 +61,7 @@ namespace Ejercicio_1
         }
         #endregion
 
-        #region MOSTRAR SOLICITAR VARIOS NUMEROS
+        #region SOLICITAR VARIOS NUMEROS
         static void MostrarPantallaSolicitarVariosNumeros()
         {
             string respuesta;
@@ -138,14 +138,41 @@ namespace Ejercicio_1
                 opcion = MostrarMenuPantallaSolicitarOpcion();
                 switch (opcion)
                 {
-                    case 1: MostrarPantallaSolicitarNumero(); break;
-                    case 2: MostrarPantallaSolicitarVariosNumeros(); break;
-                    case 3: MostrarPantallaMaximoYMinimo(); break;
-                    case 4: MostrarPantallaMostrarPromedio(); break;
-                    case 5: MostrarPantallaCantidad(); break;
-                    case 6: MostrarIniciarVariables(); break;
-                    case 7: Console.WriteLine("Saliendo..."); Thread.Sleep(500); break;
-                    default: Console.WriteLine("Opcion invalida, intente de nuevo."); break;
+                    case 1:
+                        {
+                            MostrarPantallaSolicitarNumero(); break;
+                        }
+                    case 2:
+                        {
+                            MostrarPantallaSolicitarVariosNumeros(); break;
+                        }
+                    case 3:
+                        {
+                            MostrarPantallaMaximoYMinimo(); break;
+                        }
+                    case 4:
+                        {
+                            MostrarPantallaMostrarPromedio(); break;
+                        }
+                    case 5:
+                        {
+                            MostrarPantallaCantidad(); break;
+                        }
+                    case 6:
+                        {
+                            MostrarIniciarVariables(); break;
+                        }
+                    case 7:
+                        {
+                            Console.WriteLine("Saliendo..."); Thread.Sleep(500); break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Opcion invalida");
+                            Console.WriteLine("Redirigiendo al menu de opciones...");
+                            Thread.Sleep(2500);
+                            break;
+                        }
                 }
             }
             while (opcion != 7);

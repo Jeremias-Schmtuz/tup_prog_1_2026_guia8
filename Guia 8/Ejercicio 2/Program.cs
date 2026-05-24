@@ -117,11 +117,19 @@ namespace Ejercicio_2
                 opcion = MostrarPantallaSolicitarOpcionMenu();
                 switch (opcion)
                 {
-                    case 1: MostrarPantallaSolicitarMontoARepartir();
+                    case 1:
+                        {
+                            MostrarPantallaSolicitarMontoARepartir();
                             RegistrarMontoARepartir(); break;
-                    case 2: MostrarPantallaSolicitarEdadesNiñas();
+                        }
+                    case 2:
+                        {
+                            MostrarPantallaSolicitarEdadesNiñas();
                             RegistrarEdad(); break;
-                    case 3: if (monto > 0 && edad > 0)
+                        }
+                    case 3:
+                        {
+                            if (monto > 0 && edad > 0)
                             {
                                 CalcularMontosYPorcentajesARepartir();
                                 MostrarPantallaMostrarMontoYPorcentajePorNiña(); break;
@@ -134,8 +142,19 @@ namespace Ejercicio_2
                                 Thread.Sleep(2500);
                                 Console.Clear();
                             }
-                    break;
-                        
+                            ; break;
+                        }
+                    case 4:
+                        {
+                            Console.WriteLine("Saliendo..."); Thread.Sleep(500); break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Opcion invalida");
+                            Console.WriteLine("Redirigiendo al menu de opciones...");
+                            Thread.Sleep(2500);
+                            break;
+                        }
                 }
             }
             while (opcion != 4);
